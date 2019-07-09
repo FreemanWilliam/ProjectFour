@@ -22,7 +22,7 @@ class ProduceItem(Base):
 
 	__tablename__ = 'produceItem'
 
-	name = Column()
+	name = Column(String(80))
 
 engine = create_engine(
 'sqlite:///producemenu.db')
