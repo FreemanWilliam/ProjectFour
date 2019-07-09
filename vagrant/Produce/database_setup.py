@@ -11,4 +11,5 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-engine = create_engine()
+engine = create_engine(
+'sqlite:///producemenu.db')
