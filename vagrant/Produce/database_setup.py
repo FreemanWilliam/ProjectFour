@@ -15,6 +15,8 @@ class Produce(Base):
 
 	__tablename__ = 'produce'
 
+	id = Column()
+
 class ProduceItem(Base):
 
 	__tablename__ = 'produceItem'
