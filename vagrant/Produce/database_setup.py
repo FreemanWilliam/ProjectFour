@@ -22,6 +22,8 @@ class ProduceItem(Base):
 
 	__tablename__ = 'produceItem'
 
+	name = Column()
+
 engine = create_engine(
 'sqlite:///producemenu.db')
 
