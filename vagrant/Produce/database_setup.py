@@ -24,7 +24,7 @@ class ProduceItem(Base):
 
 	name = Column(String(80), nullable=False)
 	id = Column(Integer, primary_key=True)
-	description = Column()
+	description = Column(String())
 
 engine = create_engine(
 'sqlite:///producemenu.db')
