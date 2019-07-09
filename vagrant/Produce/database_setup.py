@@ -17,6 +17,8 @@ class Produce(Base):
 
 class ProduceItem(Base):
 
+	__tablename__ = 'produceItem'
+
 engine = create_engine(
 'sqlite:///producemenu.db')
 
