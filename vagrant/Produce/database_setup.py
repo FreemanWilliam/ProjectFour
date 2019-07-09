@@ -15,7 +15,7 @@ class Produce(Base):
 
 	__tablename__ = 'produce'
 
-	id = Column(Integer)
+	id = Column(Integer, primary_key=True)
 
 class ProduceItem(Base):
 
