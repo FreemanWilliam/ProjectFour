@@ -13,6 +13,7 @@ DBSession = sessionmaker()
 @app.route('/')
 @app.route('/produce')
 def Produce():
+	session.query(Produce).first()
 	return "This is the new Produce Function."
 	
 if __name__ == '__main__':
