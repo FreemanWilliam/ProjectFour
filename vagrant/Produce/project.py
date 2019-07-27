@@ -5,13 +5,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Produce, ProduceItem
 
+
 engine = create_engine('sqlite:///producemenu.db')
 Base.metadata.bind = engine
 
-DBSession = sessionmaker()
+DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
-session
 @app.route('/')
 @app.route('/produce')
 def Produce():
