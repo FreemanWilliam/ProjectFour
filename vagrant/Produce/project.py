@@ -1,10 +1,8 @@
 from flask import Flask
-app = Flask(__name__)
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Produce, ProduceItem
-
+app = Flask(__name__)
 
 engine = create_engine('sqlite:///producemenu.db')
 Base.metadata.bind = engine
@@ -15,7 +13,7 @@ session = DBSession()
 @app.route('/')
 @app.route('/produce')
 def Produce():
-	
+	restaurant = session.query(Produce).all()
 	return "This is the new Produce Function."
 	
 if __name__ == '__main__':

@@ -11,14 +11,12 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Produce(Base):
-
 	__tablename__ = 'produce'
 
 	id = Column(Integer, primary_key=True)
 	name = Column(String(250), nullable=False)
 
 class ProduceItem(Base):
-
 	__tablename__ = 'produceItem'
 
 	name = Column(String(80), nullable=False)
@@ -28,6 +26,8 @@ class ProduceItem(Base):
 	type = Column(String(15))
 	produce_id = Column(Integer, ForeignKey('produce.id'))
 	produce = relationship(Produce)
+	
+
 
 engine = create_engine(
 'sqlite:///producemenu.db')
