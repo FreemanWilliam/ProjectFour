@@ -13,7 +13,7 @@ session = DBSession()
 @app.route('/')
 @app.route('/produce')
 def Produce():
-	restaurant = session.query(Produce).all()
+	restaurant = session.query(Produce).first()
 	return "This is the new Produce Function."
 	
 if __name__ == '__main__':
