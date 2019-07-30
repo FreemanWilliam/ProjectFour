@@ -14,6 +14,7 @@ session = DBSession()
 @app.route('/produce')
 def Produce():
 	restaurant = session.query(Produce).first()
+	items = session.query(ProduceItem).filter_by(produce_id=produce.id)
 	return "This is the new Produce Function."
 	
 if __name__ == '__main__':
